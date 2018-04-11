@@ -1,0 +1,46 @@
+\documentclass[•]{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx, subfig}
+\usepackage{caption}
+
+\begin{document}
+
+One image ???.
+	\begin{figure}[!htbp]
+	\centering
+	\includegraphics[scale=0.1]{image.jpg}
+	\caption{example of one image	} \label{one image}
+	\end{figure}
+
+Image together is shown in Figure ???.
+First sub-image is shown as Figure ???.
+In Figure ??? the second sub-image is presented.
+	\begin{figure}[!htbp]
+	\centering
+	\subfloat[first sub-image]
+	{
+		\includegraphics[scale=0.1]{image.jpg}
+		\label{sub1}
+	}
+	\qquad
+	\subfloat[second image.jpg]
+
+	\subparagraph{second image.jpg}
+	\label{sub2}
+	
+	\caption{combined image}
+	\label{img-together}
+	\end{figure}
+
+\begin{flushleft}
+The result is shown in Equation ???:
+\iffalse
+\begin{equation}
+\label{abcde}
+$&a+b+c+d+e=f$
+\end{equation}
+\fi
+\end{flushleft}
+	
+\end{document}

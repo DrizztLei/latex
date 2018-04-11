@@ -1,0 +1,33 @@
+\documentclass{article}
+\usepackage{algorithm}
+\usepackage{algorithmicx}
+\usepackage{algpseudocode}
+
+\begin{document}
+	\renewcommand{\algorithmicrequire}{ \textbf{Input:}}
+	\renewcommand{\algorithmicensure}{ \textbf{Output:}}
+	\begin{algorithm}
+	    \caption{algoritm name}
+	    \begin{algorithmic}[1]
+	        \Require input parameters
+	        \Ensure output parameters
+	        \Function {algorithm name}{input parameters}
+	            \State $V \gets 0$
+	            \For{$i \gets 1\quad to\quad len(GramArray)$}
+	                \State $element \gets GramArray[i]$
+	                \If{$GramInfo.exist(element)$}
+	                    \State $GramInfo[element].count++$
+	                \Else
+	                    \State $GramInfo.Add(<element,i,1>)$
+	                \EndIf
+	            \EndFor
+	            \While{$GramInfo.isNotEmpty()$}
+	                \State $cell \gets GramInfo.popElement()$
+	                \State $index \gets GramMap(cell.gram)$
+	                \State $V[index] \gets <cell.pos,cell.count>$
+	            \EndWhile
+	            \State \Return{$V$}
+	        \EndFunction
+	    \end{algorithmic}
+	\end{algorithm}
+\end{document}
